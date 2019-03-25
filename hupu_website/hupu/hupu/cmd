@@ -1,0 +1,2 @@
+conda activate scrapy_base
+scrapy crawl test --logfile LOG.log
