@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="spider">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome To Spider163</title>
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/spider163.css">
+
+</head>
+<body>
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="/#">主页</a></li>
+    <li role="presentation"><a href="/spider">抓取</a></li>
+  <li role="presentation"><a href="/stat">统计</a></li>
+    <li role="presentation"><a href="/scan">浏览</a></li>
+    <li role="presentation"><a href="/bussiness">商业</a></li>
+</ul>
+<div class="container index-body">
+    <h2 class="m-h2 m-h2-mb">智能抓取 <i>用户需求 · 智能定制</i></h2>
+    <div class="row">
+        <div id="index-group">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="i-c-item">
+                    <a id="gd" title="歌单"><div class="i-c-p i-c-p1"><h2 class="i-c-ph">歌单</h2></div></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="i-c-item">
+                    <a id="gq" title="歌曲"><div class="i-c-p i-c-p2"><h2 class="i-c-ph">歌曲</h2></div></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="i-c-item">
+                    <a id="gc" title="歌词"><div class="i-c-p i-c-p3"><h2 class="i-c-ph">歌词</h2></div></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="i-c-item">
+                    <a id="rp" title="热评"><div class="i-c-p i-c-p4"><h2 class="i-c-ph">热评</h2></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gdspider form-horizontal" style="display:none;">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">歌单类型</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="gdType" placeholder="全部,华语,欧美,日语,韩语,粤语,怀旧,清新,00后……">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">歌单页码</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="gdPage" placeholder="一般为1-34">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="spiderPlaylist">提交</button>
+    </div>
+
+    <div class="gqspider form-horizontal" style="display:none;">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">歌单类型</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="gdSource" placeholder="全部,华语,欧美,日语,韩语,粤语,怀旧,清新,00后……">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">歌单数量</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="gdCount" placeholder="为避免系统卡死尽量1-300">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="spiderMusic">提交</button>
+    </div>
+
+     <div class="gcspider form-horizontal" style="display:none;">
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">歌曲数量</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="gqCount" placeholder="为避免系统卡死尽量1-300">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="spiderLyric">提交</button>
+    </div>
+
+    <div class="rpspider form-horizontal" style="display:none;">
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">歌曲数量</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="gqCount-1" placeholder="为避免系统卡死尽量1-300">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="spiderComment">提交</button>
+    </div>
+
+
+    <div class="process">
+        <table class="table table-condensed" id="printTable">
+        </table>
+    </div>
+</div>
+
+
+
+
+<div class="footer">
+      <ul class="unstyled">
+        <li>@time 2017.04.07</li>
+          <li>@author 程天
+              <a href="https://www.zhihu.com/people/toocooltohavefriends/activities" class="">知乎</a>
+              <a href="" class="">微信</a>
+              <a href="https://github.com/Chengyumeng" class="">GitHub</a></li>
+      </ul>
+    </div>
+
+
+</body>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>-->
+<script src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/lib/jquery-1.10.2_d88366fd.js"></script>
+<script src="/static/js/spider163.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+
+</html>
