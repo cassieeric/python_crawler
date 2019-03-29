@@ -1,0 +1,32 @@
+import itchat
+import requests
+def get_response(msg):
+    apiUrl = 'http://www.tuling123.com/openapi/api'
+    data = {
+    'key': '180b4304b4b647d3b1920caf60f', # Tuling Key，API的值
+
+    'info': msg, # 发出去的消息
+
+    'userid': 'xuebaobao', # 用户名
+}
+r = requests.post(apiUrl, data=data).json() # post请求
+
+return r.get('text')
+@itchat.msg_register(itchat.content.TEXT) # 用于接收来自朋友间的对话消息 def print_content(msg):
+
+return get_response(msg['Text'])
+@itchat.msg_register([itchat.content.TEXT], isGroupChat=True) # 用于接收群里面的对话消息
+
+def print_content(msg):
+
+return get_response(msg['Text'])
+itchat.auto_login(hotReload==True) # 通过微信扫描二维码登录
+itchat.run()
+
+/*
+完整的实现步骤可以参考这篇文章：https://zhuanlan.zhihu.com/p/33538367
+itchat.auto_login()方法。这个方法的意思是通过微信扫描二维码登录。
+但是这种登录的方式确实短时间的登录，并不会保留登录的状态，也就是下次登录时还是需要扫描二维码，
+如果加上hotReload==True的话，那么就会保留登录的状态，至少在后面的几次登录过程中不会再次扫描二维码，
+该参数生成一个静态文件itchat.pkl，和实现机器人这个代码在同一个目录下，其作用是用于存储登录状态。
+*/
