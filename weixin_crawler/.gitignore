@@ -1,0 +1,11 @@
+proxy/node_modules/
+proxy/package-lock.json
+scratch/
+.idea/
+
+*.pyc
+*.bat
+cache_*.js
+screen_*.png
+
+dump.rdb
