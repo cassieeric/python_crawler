@@ -51,5 +51,3 @@ if __name__=='__main__':
         #print(url)
         apptime=get_comment(url)
         print(apptime)
-
-
