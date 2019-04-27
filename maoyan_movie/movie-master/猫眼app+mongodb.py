@@ -41,6 +41,7 @@ def get_comment(url):
         com.append(inf)
     collection.insert_many(com)
     return inf['apptime']
+
 if __name__=='__main__':
     endtime='2018-11-06 00:00:00'
     #apptime=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
