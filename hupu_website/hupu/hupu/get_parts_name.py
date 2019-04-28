@@ -93,7 +93,6 @@ html_ = '''<ul>
 
 from lxml import html
 
-
 def get():
     results = {}
     tree = html.fromstring(html_)
