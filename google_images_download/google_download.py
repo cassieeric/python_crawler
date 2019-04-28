@@ -22,7 +22,6 @@ def download_images(csv_file):
         downloader.download(arguments)
 
 if __name__ == '__main__':
-
     download_images(csv_file)
     """
    传入关键字等参数，下载对应的图片文件
