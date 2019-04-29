@@ -11,7 +11,6 @@ from lxml import html
 
 from project.parts import parts
 
-
 # parts = {'火箭专区': 'https://bbs.hupu.com/rockets'}
 
 class Spider(scrapy.Spider):
