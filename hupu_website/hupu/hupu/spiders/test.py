@@ -144,7 +144,7 @@ class Spider(scrapy.Spider):
             #                                                                      comment['comment_light'],
             #                                                                      comment['comment'],
             #                                                                      comment['comment_quote_author'],
-            #                                                                      comment['comment_quote_content']))
+            #                                                                     comment['comment_quote_content']))
             #     else:
             #         print('评论者:{}, 认可数:{},评论:{}\n======'.format(comment['comment_author'],
             #                                                     comment['comment_light'],
