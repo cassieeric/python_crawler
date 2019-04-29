@@ -196,4 +196,3 @@ def GetSt(myurl):
 
 GetSt(sturl)
 
-
