@@ -69,6 +69,7 @@ def cap(html):
         print('验证成功继续爬虫')
     except z.status_code == 403:
         cap(html)
+        
 '''
     try:
         r = requests.get(url, headers=headers, proxies=proxies).text
@@ -84,6 +85,7 @@ def cap(html):
     except Exception as e:
         t(url)
 '''
+
 def t(url):
     s=time.time()
     proxies_list = [{'http': 'http://1.196.160.101:9999'}, {'http': 'http://112.115.57.20:3128'},
