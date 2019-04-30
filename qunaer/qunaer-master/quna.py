@@ -84,7 +84,6 @@ def cap(html):
             return s
     except Exception as e:
         t(url)
-
 '''
 def t(url):
     s=time.time()
