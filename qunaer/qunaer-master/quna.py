@@ -52,6 +52,7 @@ def get_inf(url):
         return dd
     except Exception as e:
         get_inf(url)
+        
 def cap(html):
     try:
         soup = BeautifulSoup(html, 'lxml')
