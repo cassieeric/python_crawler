@@ -152,7 +152,6 @@ if __name__=='__main__':
             #s=s.find_all('div',class_='sight_item')
             #v=s.find_all('div',class_='sight_item sight_itempos')
 
-
             try:
                 for i in s:
                     inf = {}
