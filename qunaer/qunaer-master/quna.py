@@ -130,7 +130,6 @@ def t(url):
     s = soup.find('div', class_='result_list')
     return s
 
-
 if __name__=='__main__':
     start=time.time()
 
