@@ -18,6 +18,7 @@ def getTime():
 #getTime()
 #url='https://api.bilibili.com/x/v2/reply?callback=jQuery17202479861083706283_1540867066061&jsonp=jsonp&pn=3&type=1&oid=18089528&sort=0&_='+str(int(time.time()*1000))
 #获得整个视频集的相关信息
+
 def get_video_inf(url):
     headers = {
         'Cookie': 'LIVE_BUVID=AUTO6915375856445563; stardustvideo=1; buvid3=EEB30FF5-70B4-4E16-B15A-94FE3F7AF07F163007infoc; rpdid=kmpsximoqmdoskmsqsxqw; finger=edc6ecda; CURRENT_FNVAL=16; sid=4ih3nm1u; fts=1540866975; UM_distinctid=166c2db295180-082aa06c2afa6d-47e1039-100200-166c2db2952110',
@@ -41,6 +42,7 @@ def get_video_inf(url):
     video_inf['分享']=html['share']
     video_inf['观看次数']=html['view']
     return video_inf
+
 #获取评论信息
 def get_comment(url):
     headers={
