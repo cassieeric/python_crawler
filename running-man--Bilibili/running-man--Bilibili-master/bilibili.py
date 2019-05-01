@@ -69,6 +69,7 @@ def get_comment(url):
         df=df.append(inf,ignore_index=True)
         #print(inf)
     df.to_csv('runningman2017.csv',index=False, mode='a', header=False,columns=['评论','time','floor','点赞','性别','name','等级','回复'],encoding='utf-8')
+    
 if __name__=='__main__':
     video_url='https://api.bilibili.com/x/web-interface/view?aid=18089528'
     video=get_video_inf(video_url)
