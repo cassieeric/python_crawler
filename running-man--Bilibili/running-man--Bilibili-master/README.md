@@ -4,8 +4,7 @@
 最后的词云图是用R生成的
 这是R的代码
 library(wordcloud2)
-data<-read.csv(header=FALSE,'C:/Users/伊雅/PycharmProjects/untitled/venv/share/doc/
-jieba.csv')
+data<-read.csv(header=FALSE,'C:/Users/伊雅/PycharmProjects/untitled/venv/share/doc/jieba.csv')
 f=data.frame(data)
 f
 wordcloud2(f)
