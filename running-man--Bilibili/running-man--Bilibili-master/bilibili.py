@@ -83,4 +83,3 @@ if __name__=='__main__':
             print('重新抓取第%d页' % page)
             get_comment(url)
             time.sleep(30)
-
