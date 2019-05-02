@@ -8,7 +8,6 @@ def stopwordslist(filepath):
     stopwords = [line.strip() for line in open(filepath, 'r', encoding='gbk').readlines()]
     return stopwords
 
-
 # 对句子进行分词
 def seg_sentence(sentence):
     sentence_seged = jieba.cut(sentence.strip())
