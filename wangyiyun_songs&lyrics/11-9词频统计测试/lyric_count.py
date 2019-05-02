@@ -6,13 +6,6 @@ import jieba
 import jieba.analyse
 import os
 
-# text = ['Hello', 'My', 'name', 'is', 'dcpeng', 'Dcpeng', 'is', 'name']
-# for i in range(len(text)):
-#     # print(text[i])
-#     text[i] = text[i].lower()
-# count_dict = Counter(text).most_common(4)
-# print(count_dict)
-
 # text = ['忽然就流出泪来', '忽然想要听到她的声音', '而我却什么话都说不出来',
 #         '是谁在温暖你', '有谁会让我觉得这夜晚还有期盼', '我就会跟着它去远行',
 #         '可是你在哪里', '可是明天醒来的第一脸阳光']
