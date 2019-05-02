@@ -20,7 +20,6 @@ def seg_sentence(sentence):
                 outstr += " "
     return outstr
 
-
 inputs = open('all_lyrics.txt', 'r', encoding='gbk')
 outputs = open('all_lyrics_outputs.txt', 'w', encoding='gbk')
 for line in inputs:
