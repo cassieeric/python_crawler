@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 import jieba
 
-
 # jieba.load_userdict('userdict.txt')
 # 创建停用词list
 def stopwordslist(filepath):
