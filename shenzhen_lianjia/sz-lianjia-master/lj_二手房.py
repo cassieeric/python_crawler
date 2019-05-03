@@ -65,6 +65,7 @@ def get_lianjia_url_lists(url):
         url_list.append(u)
     #print(url_list)
     return zon,url_list
+
 def get_total_num(url):
     soup=Soup(url)
     total=soup.find('div',class_='resultDes clear').find('h2').find('span').text
