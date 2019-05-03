@@ -53,6 +53,7 @@ def Soup(url):
         time.sleep(15)
         Soup(url)
     return soup
+
 def get_lianjia_url_lists(url):
     soup=Soup(url)
     soup=soup.find('div',class_='sub_nav section_sub_nav').find_all('a')
