@@ -34,7 +34,6 @@ def get_ziru_url_lists(url):
             url_list.append('http:'+i.get('href'))
     return url_list,url_dict
 
-
 def Soup(url):
     try:
         headers = {
