@@ -7,7 +7,6 @@ import os
 import jieba
 from wordcloud import WordCloud
 
-
 def analyse_words():
     """
     分析抓取到的朋友圈数据，使用jieba进行分词，使用wordcloud生成词云
