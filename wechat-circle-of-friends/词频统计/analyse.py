@@ -28,6 +28,7 @@ def analyse_words():
     wordcloud.to_file('keys.png')  # 保存图片
     image = wordcloud.to_image()  # 转化为图片
     image.show()  # 展示图片
+    
 
 if __name__ == '__main__':
     analyse_words()
