@@ -4,7 +4,6 @@
 
 import json
 import os
-
 import jieba
 from wordcloud import WordCloud
 
