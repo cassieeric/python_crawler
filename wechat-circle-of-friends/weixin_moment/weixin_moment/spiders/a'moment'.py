@@ -4,6 +4,7 @@ import json
 import re
 from weixin_moment.items import WeixinMomentItem
 
+
 class AmomentSpider(scrapy.Spider):
     name = 'moment'
     allowed_domains = ['chushu.la']
