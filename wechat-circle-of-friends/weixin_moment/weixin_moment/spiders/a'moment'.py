@@ -12,7 +12,6 @@ class AmomentSpider(scrapy.Spider):
 
     bookid = '071569794'  # 请填写【出书啦】返回链接中的数字部分
 
-
     def start_requests(self):
         """
         使用get方式请求导航数据包
