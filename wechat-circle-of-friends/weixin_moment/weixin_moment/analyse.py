@@ -29,5 +29,6 @@ def analyse_words():
     image = wordcloud.to_image()  # 转化为图片
     image.show()  # 展示图片
 
+
 if __name__ == '__main__':
     analyse_words()
