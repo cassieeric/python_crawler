@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud, ImageColorGenerator
 import PIL.Image as Image
 
+# 运行程序，扫码登录
 itchat.login()
 friends = itchat.get_friends(update=True)
 
