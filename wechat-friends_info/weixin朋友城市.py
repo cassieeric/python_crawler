@@ -12,5 +12,5 @@ def get_info():
   City_count = City_count[City_count.index != '']
   print(City_count)  
 
+# 运行程序后，扫码登录即可
 get_info()
-
