@@ -63,4 +63,3 @@ my_wordcloud = WordCloud(background_color="white", max_words=2000,
 file_name_p = NickName+'.jpg'
 
 my_wordcloud.to_file(file_name_p)  # 保存图片
-
