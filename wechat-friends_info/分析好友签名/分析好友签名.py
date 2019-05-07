@@ -64,4 +64,3 @@ file_name_p = NickName+'.jpg'
 
 my_wordcloud.to_file(file_name_p)  # 保存图片
 
-
