@@ -54,10 +54,12 @@ word_space_split = ' '.join(wordlist)
 # 画图
 coloring = np.array(Image.open("D:/pythonDemo/2018/May/pic.png"))  # 词云的背景和颜色。这张图片在本地。
 
+# 生成词云
 my_wordcloud = WordCloud(background_color="white", max_words=2000,
                          mask=coloring, max_font_size=60, random_state=42, scale=2,
                          font_path="D:/pythonDemo/2018/May/simhei.ttf").generate(word_space_split)
-# 生成词云。font_path="D:\pythonDemo\2018\May\simhei.ttf"指定字体，有些字不能解析中文，这种情况下会出现乱码。
+# 指定字体，有些字不能解析中文，这种情况下会出现乱码。
+# font_path="D:\pythonDemo\2018\May\simhei.ttf"
 
 
 file_name_p = NickName+'.jpg'
