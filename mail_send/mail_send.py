@@ -6,12 +6,12 @@ import smtplib  # 引入smtp模块
 from email.mime.text import MIMEText  # 邮件内容为纯文本或HTML页面
 from email.header import Header # 从email引入Header方法，Header()用来构建邮件头
 
-def login_in():#登录阶段
+def login_in():  # 登录阶段
     global email,password,pop_server,server1,server2
 
-    email=input('请输入您的邮箱账号：')#输入邮件地址
-    password=input('请输入第三方授权码:')#输入第三方授权码
-    pop_server=input('请输入POP3服务器地址:')#输入pop服务器地址
+    email=input('请输入您的邮箱账号：')  # 输入邮件地址
+    password=input('请输入第三方授权码:')  # 输入第三方授权码
+    pop_server=input('请输入POP3服务器地址:')  # 输入pop服务器地址
 
     server1=poplib.POP3_SSL(pop_server)#连接到POP3服务器(当使用的邮箱pop服务有加密时，使用POP3_SSL)
     print(server1.getwelcome().decode('utf-8'))#打印POP3服务器的欢迎文字
