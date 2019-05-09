@@ -13,14 +13,14 @@ def login_in():  # 登录阶段
     password=input('请输入第三方授权码:')  # 输入第三方授权码
     pop_server=input('请输入POP3服务器地址:')  # 输入pop服务器地址
 
-    server1=poplib.POP3_SSL(pop_server)#连接到POP3服务器(当使用的邮箱pop服务有加密时，使用POP3_SSL)
-    print(server1.getwelcome().decode('utf-8'))#打印POP3服务器的欢迎文字
+    server1=poplib.POP3_SSL(pop_server)  # 连接到POP3服务器(当使用的邮箱pop服务有加密时，使用POP3_SSL)
+    print(server1.getwelcome().decode('utf-8'))  # 打印POP3服务器的欢迎文字
 
-    #身份认证
+    # 身份认证
     server1.user(email)
     server1.pass_(password)
 
-def handle_command(user_cmd,email_title):#处理命令
+def handle_command(user_cmd,email_title):  # 处理命令
     if user_cmd=='1':
         #展示出主要信息
         print('邮件总数: %s; 占用的空间大小: %s;' % server1.stat()) #利用stat()可返回邮件数量和占用空间
