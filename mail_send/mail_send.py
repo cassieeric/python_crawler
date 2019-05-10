@@ -88,7 +88,7 @@ def sendmail():
     server_smtp=input('请输入SMTP服务器地址：')
     text=input('请编辑您的邮件内容(按Enter键结束)\n')
     msg=MIMEText(text,'plain','utf-8')
-    #构建邮件头(发件人、收件人、邮件主题)
+    # 构建邮件头(发件人、收件人、邮件主题)
     msg['From']=Header(email)
     msg['To']=Header(to_add)
     msg['Subject']=Header(input('请编辑邮件主题：\n'))
@@ -103,8 +103,8 @@ def start():  # 开始
     login_in()  # 调用登录阶段的login_in函数
 
     resp,mails,octets=server1.list()  # 获取邮件列表
-    print(mails) #打印所有邮件编号及占用大小
-    index=len(mails)  #邮件总数目赋值给index
+    print(mails)  # 打印所有邮件编号及占用大小
+    index=len(mails)  # 邮件总数目赋值给index
     print(index)
     print('\n--------------------------------------------')
     print('输入"0"退出邮箱\n输入"1" 获取收件箱的主要信息.\n输入"2" 查看具体的邮件信息\n输入"3"发送邮件')
