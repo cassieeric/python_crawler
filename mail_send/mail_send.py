@@ -67,20 +67,20 @@ def print_infor(msg,indent=0):  # 输出信息
             print('%sAttachment :%s'%('  '*indent,content_type))  # 否则为附件，获取附件信息
 
 
-def decode_str(s):#解码
+def decode_str(s):  # 解码
     value,charset=decode_header(s)[0]
     if charset:
-        value=value.decode(charset)#如果存在编码问题，则进行相应的解码
+        value=value.decode(charset)  # 如果存在编码问题，则进行相应的解码
     return value;
 
-#定义一个检测编码的函数
+# 定义一个检测编码的函数
 def guess_charset(msg):
-    charset=msg.get_charset() #采用get_charset()的方法获取编码
-    if charset is None:       #若获取不到，则在原始文本中寻找
-        content_type=msg.get('Content-Type','').lower()   #lower()把字符串全改为小写
-        pos=content_type.find('charset=')  #在原始文本中找'charset'字符串
-        if pos>=0:                        #若存在，则获取其后面的编码信息
-            charset=content_type[pos+8:].strip()   #strip()用于去除字符串前后空格字符
+    charset=msg.get_charset()   # 采用get_charset()的方法获取编码
+    if charset is None:       # 若获取不到，则在原始文本中寻找
+        content_type=msg.get('Content-Type','').lower()   # lower()把字符串全改为小写
+        pos=content_type.find('charset=')  # 在原始文本中找'charset'字符串
+        if pos>=0:                        # 若存在，则获取其后面的编码信息
+            charset=content_type[pos+8:].strip()   # strip()用于去除字符串前后空格字符
     return charset
 
 def sendmail():
@@ -93,16 +93,16 @@ def sendmail():
     msg['To']=Header(to_add)
     msg['Subject']=Header(input('请编辑邮件主题：\n'))
     server2=smtplib.SMTP()
-    server2.connect(server_smtp,25)#链接服务器
-    server2.login(email,password)#登录邮箱
+    server2.connect(server_smtp,25)  # 链接服务器
+    server2.login(email,password)  # 登录邮箱
     server2.sendmail(email,to_add,msg.as_string())
     #server2.quit()
 
-def start():#开始
+def start():  # 开始
 
-    login_in()#调用登录阶段的login_in函数
+    login_in()  # 调用登录阶段的login_in函数
 
-    resp,mails,octets=server1.list() #获取邮件列表
+    resp,mails,octets=server1.list()  # 获取邮件列表
     print(mails) #打印所有邮件编号及占用大小
     index=len(mails)  #邮件总数目赋值给index
     print(index)
