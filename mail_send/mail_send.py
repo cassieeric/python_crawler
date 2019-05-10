@@ -23,11 +23,11 @@ def login_in():  # 登录阶段
 def handle_command(user_cmd,email_title):  # 处理命令
     if user_cmd=='1':
         #展示出主要信息
-        print('邮件总数: %s; 占用的空间大小: %s;' % server1.stat()) #利用stat()可返回邮件数量和占用空间
+        print('邮件总数: %s; 占用的空间大小: %s;' % server1.stat())  # 利用stat()可返回邮件数量和占用空间
     elif user_cmd=='2':
         resp,lines,octets=server1.retr(email_title)
-        msg_content=b'\r\n'.join(lines).decode('utf-8')#获取邮件的原始文本
-        msg=Parser().parsestr(msg_content)#解析邮件的原始文本
+        msg_content=b'\r\n'.join(lines).decode('utf-8')  # 获取邮件的原始文本
+        msg=Parser().parsestr(msg_content)  # 解析邮件的原始文本
         print_infor(msg)
 
 
