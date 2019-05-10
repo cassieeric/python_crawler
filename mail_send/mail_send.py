@@ -22,7 +22,7 @@ def login_in():  # 登录阶段
 
 def handle_command(user_cmd,email_title):  # 处理命令
     if user_cmd=='1':
-        #展示出主要信息
+        #  展示出主要信息
         print('邮件总数: %s; 占用的空间大小: %s;' % server1.stat())  # 利用stat()可返回邮件数量和占用空间
     elif user_cmd=='2':
         resp,lines,octets=server1.retr(email_title)
