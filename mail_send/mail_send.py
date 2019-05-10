@@ -35,36 +35,36 @@ def handle_command(user_cmd,email_title):  # 处理命令
         print('error command!\n')
 
 
-def print_infor(msg,indent=0):#输出信息
-    if indent==0:#indent用于缩进显示
+def print_infor(msg,indent=0):  # 输出信息
+    if indent==0:  # indent用于缩进显示
         for header in ['From','To','Subject']:
             value=msg.get(header,'')
             if value:
                 if header=='Subject':
-                    value=decode_str(value) #解码主题信息
-                else :                      #解码发件人和收件人信息
-                    hdr,addr=parseaddr(value)
+                    value=decode_str(value)   # 解码主题信息
+                else :                     
+                    hdr,addr=parseaddr(value)  # 解码发件人和收件人信息
                     name=decode_str(hdr)
                     value=u'%s <%s>'%(name,addr)
             print('%s%s: %s'%('  '*indent,header,value))
-    #将组合邮件对象分离
+    # 将组合邮件对象分离
     if msg.is_multipart():
-        parts=msg.get_payload()  #提取msg的子对象
+        parts=msg.get_payload()  # 提取msg的子对象
         for n,part in enumerate(parts):
             print('%spart %s'%('  '*indent,n))
             print('%s---------------'%('  '*indent))
             print_infor(part,indent+1)
-    #逐一打印邮件对象
+    # 逐一打印邮件对象
     else:
-        content_type=msg.get_content_type()   #获取邮件对象的格式
-        if content_type=='text/plain' or content_type=='text/html':#若为文本邮件，直接打印
+        content_type=msg.get_content_type()   # 获取邮件对象的格式
+        if content_type=='text/plain' or content_type=='text/html':  # 若为文本邮件，直接打印
             content=msg.get_payload(decode=True)
-            charset=guess_charset(msg)         #检测编码
+            charset=guess_charset(msg)         # 检测编码
             if charset:
-                content=content.decode(charset) #解码
-            print('%sText: %s'%('  '*indent,content+'...'))#打印文本内容
+                content=content.decode(charset) # 解码
+            print('%sText: %s'%('  '*indent,content+'...'))  # 打印文本内容
         else:
-            print('%sAttachment :%s'%('  '*indent,content_type))#否则为附件，获取附件信息
+            print('%sAttachment :%s'%('  '*indent,content_type))  # 否则为附件，获取附件信息
 
 
 def decode_str(s):#解码
