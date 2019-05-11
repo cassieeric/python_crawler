@@ -96,7 +96,6 @@ def sendmail():
     #server2.quit()
 
 def start():  # 开始
-
     login_in()  # 调用登录阶段的login_in函数
 
     resp,mails,octets=server1.list()  # 获取邮件列表
