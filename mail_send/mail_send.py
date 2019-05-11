@@ -57,7 +57,7 @@ def print_infor(msg,indent=0):  # 输出信息
         content_type=msg.get_content_type()   # 获取邮件对象的格式
         if content_type=='text/plain' or content_type=='text/html':  # 若为文本邮件，直接打印
             content=msg.get_payload(decode=True)
-            charset=guess_charset(msg)         # 检测编码
+            charset=guess_charset(msg)  # 检测编码
             if charset:
                 content=content.decode(charset) # 解码
             print('%sText: %s'%('  '*indent,content+'...'))  # 打印文本内容
