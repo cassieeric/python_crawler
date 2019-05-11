@@ -45,6 +45,7 @@ def print_infor(msg,indent=0):  # 输出信息
                     name=decode_str(hdr)
                     value=u'%s <%s>'%(name,addr)
             print('%s%s: %s'%('  '*indent,header,value))
+            
     # 将组合邮件对象分离
     if msg.is_multipart():
         parts=msg.get_payload()  # 提取msg的子对象
