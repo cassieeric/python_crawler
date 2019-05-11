@@ -64,7 +64,6 @@ def print_infor(msg,indent=0):  # 输出信息
         else:
             print('%sAttachment :%s'%('  '*indent,content_type))  # 否则为附件，获取附件信息
 
-
 def decode_str(s):  # 解码
     value,charset=decode_header(s)[0]
     if charset:
