@@ -29,8 +29,6 @@ def handle_command(user_cmd,email_title):  # 处理命令
         msg_content=b'\r\n'.join(lines).decode('utf-8')  # 获取邮件的原始文本
         msg=Parser().parsestr(msg_content)  # 解析邮件的原始文本
         print_infor(msg)
-
-
     else :
         print('error command!\n')
 
