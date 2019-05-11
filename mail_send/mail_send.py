@@ -32,7 +32,6 @@ def handle_command(user_cmd,email_title):  # 处理命令
     else :
         print('error command!\n')
 
-
 def print_infor(msg,indent=0):  # 输出信息
     if indent==0:  # indent用于缩进显示
         for header in ['From','To','Subject']:
