@@ -1,11 +1,5 @@
 import time
 
-# unix_time1 = int(time.mktime(time.strptime('2016-10-1 00:00:00', '%Y-%m-%d %H:%M:%S')))
-# unix_time2 = int(time.mktime(time.strptime('2016-10-2 00:00:00', '%Y-%m-%d %H:%M:%S')))
-# print(unix_time1)
-# print(unix_time2)
-
-
 # -*- coding: utf-8 -*-
 """
 Spyder Editor
