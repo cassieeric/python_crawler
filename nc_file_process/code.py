@@ -3,7 +3,6 @@ import netCDF4
 from netCDF4 import Dataset
 nc_obj = Dataset('D:\\皮皮猫数据\\tem_e0025_2.nc')
 
-
 #查看nc文件有些啥东东
 # print(nc_obj)
 # print('---------------------------------------')
