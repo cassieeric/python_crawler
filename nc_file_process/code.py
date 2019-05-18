@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
 import netCDF4
 from netCDF4 import Dataset
 nc_obj = Dataset('D:\\皮皮猫数据\\tem_e0025_2.nc')
