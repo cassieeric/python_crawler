@@ -54,9 +54,7 @@ tem = (nc_obj.variables['tem'][:])
 # print(len(time1))
 # print(tem)
 # print('---------------******-------------------')
-# for i in tem:
-#     print(i)
-#
+
 file = open('ppm_lat.txt', 'a')
 # file.write('lat,lon,time1,tem'+'\n')
 # file.write('lat,lon'+'\n')
