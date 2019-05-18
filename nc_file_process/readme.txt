@@ -1,5 +1,5 @@
 [Introduction]
-This folder is mainly designed to process .nc file.
+This folder is mainly designed to process .nc file, a complex file with complex data structure.
 
 reference link:
 1. https://blog.csdn.net/showpingzhang/article/details/83384780
