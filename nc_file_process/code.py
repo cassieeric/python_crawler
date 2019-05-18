@@ -32,7 +32,6 @@ nc_obj = Dataset('D:\\皮皮猫数据\\tem_e0025_2.nc')
 # print(nc_obj.variables['lon'].units)
 # print('---------------------------------------')
 
-
 #读取数据值
 lat = (nc_obj.variables['lat'][:])
 # lon = (nc_obj.variables['lon'][:])
