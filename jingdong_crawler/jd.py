@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 from urllib.request import urlopen
 from urllib.parse import quote
 from bs4 import BeautifulSoup
