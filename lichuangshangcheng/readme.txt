@@ -10,3 +10,7 @@ Finally, the collected data is stored in Excel.
 
 [Sugestion]
 In order to improve the data collection speed, multi-threading and multi-process is developed in the program.
+
+[remark]
+2019/5/22, the website change some tags, the former script cannot be used to collect data from the website.
+Thus, script is modified this day and is efficicy to collect data from wenbsite.
