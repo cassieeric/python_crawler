@@ -1,2 +1,2 @@
 # Introduction
-This crawler script is about hupu website, using Scrapy crawler framework.
+This crawler script is about hupu website, using the Scrapy crawler framework.
