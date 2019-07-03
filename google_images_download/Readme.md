@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 This script is designed to collect your designated picture from Google brower, which is very exciting!
 The main reference link is here: https://github.com/hardikvasa/google-images-download
