@@ -3,7 +3,7 @@
 This folder is used to crawler data from http://www.icbase.com/.
 The main fucntion is to collect the all website data.
 
-[Strategy]
+# Strategy
 Using requests+re+xpath modules.
 Firstly, we collect the second website tags.
 Then, base on the second website tags, we collect the third website tags.
