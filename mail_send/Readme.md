@@ -1,2 +1,2 @@
 # Introduction
-This file is about mail sending.
+This folder is about mail sending.
