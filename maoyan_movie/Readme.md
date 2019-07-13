@@ -1,3 +1,3 @@
 # Introduction
-This folder is mainly about maoyan movie crawler, using Python + Mongodb.
-The script is forked from zuobangbang, a postgraduate from hehai university, nanjing, jiangsu province.
+This folder is mainly about Maoyan movie crawler, using Python + Mongodb.
+The script is forked from zuobangbang, a postgraduate from Hehai university, nanjing, jiangsu province.
