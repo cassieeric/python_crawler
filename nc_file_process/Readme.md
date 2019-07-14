@@ -5,7 +5,8 @@ reference link:
 1. https://blog.csdn.net/showpingzhang/article/details/83384780
 2. https://www.cnblogs.com/shoufengwei/p/9068379.html
 
-nc 全称 netCDF（The Network Common Data Form），可以用来存储一系列的数组，就是这么简单（参考https://www.unidata.ucar.edu/software/netcdf/docs/netcdf_introduction.html）。
+nc 全称 netCDF（The Network Common Data Form），可以用来存储一系列的数组，就是这么简单。
+参考连接：https://www.unidata.ucar.edu/software/netcdf/docs/netcdf_introduction.html
 
 既然 nc 可以用来一系列的数组，所以经常被用来存储科学观测数据，最好还是长时间序列的。
 
