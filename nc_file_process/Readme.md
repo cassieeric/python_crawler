@@ -1,4 +1,4 @@
-[Introduction]
+# Introduction
 This folder is mainly designed to process .nc file, a complex file with complex data structure.
 
 reference link:
