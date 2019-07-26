@@ -40,7 +40,7 @@ https://www.youtube.com/watch?v=CbfLRCV7oeU&t=8s
 |     | 存储      | Mongodb / Redis                               |
 |     | 索引      | Elasticsearch                                 |
 
-## 运行方法
+# 运行方法
 
 > #### Insatall  mongodb / redis / elasticsearch and run them in the background
 > 
