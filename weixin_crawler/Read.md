@@ -88,7 +88,7 @@ https://www.youtube.com/watch?v=CbfLRCV7oeU&t=8s
 > 
 > Let's go to explore the world in localhost:5000 together
 
-## 功能展示
+# 功能展示
 
 UI主界面
 
