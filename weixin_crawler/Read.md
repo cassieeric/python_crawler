@@ -6,7 +6,7 @@ weixin_crawler是一款使用Scrapy、Flask、Echarts、Elasticsearch等实现�
 
 https://www.youtube.com/watch?v=CbfLRCV7oeU&t=8s
 
-## 主要特点
+# 主要特点
 
 1. 使用Python3编写
 
