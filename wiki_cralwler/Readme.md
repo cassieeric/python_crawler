@@ -29,4 +29,4 @@ number of code.
 
 # Ackonwledgement
 
-I sincerely thanks to my junior fellow apprentice hepeichao. With his help, I successfully completed the script.
+I sincerely thanks to my junior fellow apprentice Hepeichao. With his help, I successfully completed the script.
