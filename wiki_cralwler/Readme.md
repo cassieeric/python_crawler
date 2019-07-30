@@ -18,7 +18,7 @@ Actually, Python2 is also feasible , so is Linux or Mac, you just need to change
 
 
 
-Notice
+# Notice
 
 If you want to execute the script, you may need to put the two files(juli_nm.py and uid.txt) in the same directory, otherwise some error will be generated.
 
