@@ -1,4 +1,4 @@
-# Introduction]
+# Introduction
 
 This folder is used to crawler data from http://xianhuo.dzsc.com/.
 
