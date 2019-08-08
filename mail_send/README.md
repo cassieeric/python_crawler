@@ -1,2 +1,2 @@
 # Introduction
-This folder is about mail sending.
+This folder is mainly about mail sending.
