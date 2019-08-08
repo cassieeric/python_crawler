@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import poplib  # 引入poplib模块
 from email.parser import Parser  # 引入解析模块
 from email.header import decode_header  # 获取头文件的编码信息
