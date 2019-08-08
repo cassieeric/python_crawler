@@ -99,7 +99,7 @@ def sendmail():
 def start():  # 开始
     login_in()  # 调用登录阶段的login_in函数
 
-    resp,mails,octets=server1.list()  # 获取邮件列表
+    resp, mails, octets=server1.list()  # 获取邮件列表
     print(mails)  # 打印所有邮件编号及占用大小
     index=len(mails)  # 邮件总数目赋值给index
     print(index)
