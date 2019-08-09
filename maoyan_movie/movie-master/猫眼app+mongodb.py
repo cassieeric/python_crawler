@@ -24,7 +24,7 @@ def get_comment(url):
         'accept-language': 'zh-CN,zh;q=0.9',
         'cache-control': 'max-age=0',
         'cookie': '_lx_utm=utm_source%3DBaidu%26utm_medium%3Dorganic; _lxsdk_cuid=1672650f7e0c8-01f4bc25633d95-47e1039-100200-1672650f7e0c8; _lxsdk=CE5BF450EB1A11E8A47169D6D14683E08BFAA1637E344D4B8B3E18A6540975DE; v=3; __mta=186940695.1542536099924.1542536352540.1542537253364.4',
-'upgrade-insecure-requests': '1',
+        'upgrade-insecure-requests': '1',
 'user-agent':random.choice(useragnet)
     }
     
