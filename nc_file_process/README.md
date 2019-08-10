@@ -1,7 +1,7 @@
 # Introduction
 This folder is mainly designed to process .nc file, a complex file with complex data structure.
 
-reference link:
+Reference link:
 1. https://blog.csdn.net/showpingzhang/article/details/83384780
 2. https://www.cnblogs.com/shoufengwei/p/9068379.html
 
