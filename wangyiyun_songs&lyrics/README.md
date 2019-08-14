@@ -9,4 +9,4 @@ Python3 + Pycharm
 
 
 OS
-Windows or Linux , Mac is also ok!
+Windows or Linux , Mac is also work.
