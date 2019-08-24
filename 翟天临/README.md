@@ -3,7 +3,7 @@
   微博评论_简.py : 利用python爬取微博评论
   
 ## 运行环境
-  Python3.6
+  Python3.6 + Pycharm2018
   
 ## 需要安装的包
   headers_raw_to_dict
