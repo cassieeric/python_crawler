@@ -1,5 +1,5 @@
 # Introduction
-This folder is about CmsNews crawler.
+This folder is about zjzfcg crawler.
 
 Target url is: http://manager.zjzfcg.gov.cn/
 
