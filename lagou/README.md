@@ -1,5 +1,5 @@
 # Introduction
-This file is mainly used for collectiong data from lagou website.
+This file is mainly used for collectiong data from Lagou website.
 
 Lagou website is designed interesting, the data here is JS loading. 
 
