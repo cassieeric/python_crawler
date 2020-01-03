@@ -2,7 +2,7 @@
 
 This folder is mainly used to store Bilibili_AutoLogin scrpits.
 The Python code is stored in the .py file.
-You can 
+You can download the code on the bilibili_aotiLogin.py.
 With the Python code, you can login Bilibili website automatically.
 
 # Environment
