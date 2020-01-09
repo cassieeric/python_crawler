@@ -96,7 +96,6 @@ Xl69GV6klzgxW6d2xQIDAQAB
     value = cipher_text.decode('utf8')  # 将加密获取到的bytes类型密文解码成str类型
     return value
 
-
 # 获取key
 def get_act():
     act_header = {
