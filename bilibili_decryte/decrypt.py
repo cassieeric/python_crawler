@@ -76,7 +76,6 @@ def get2CaptchaChallengeAndValidateSeccode(challenge):
 
         time.sleep(5)
 
-
 # 密码加密
 def crack_pwd(hash: str, pwd: str):
     key = """-----BEGIN PUBLIC KEY-----
