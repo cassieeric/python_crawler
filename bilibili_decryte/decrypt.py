@@ -29,7 +29,6 @@ gt = "b6cc0fc51ec7995d8fd3c637af690de3"
 pageurl = "https://passport.bilibili.com/login"
 api_server = "api.geetest.com"
 
-
 def getChallengeAndKey():
     commbine_header = {
         "Accept": "application/json, text/plain, */*",
