@@ -122,7 +122,6 @@ def get_act():
     # print(key)
     return hash, key
 
-
 def login_v2():
     login_v2_header = {
         "Accept": "application/json, text/plain, */*",
