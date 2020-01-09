@@ -52,7 +52,6 @@ def getChallengeAndKey():
     challenge = response_commbine.json().get("data").get("result").get("challenge")
     return key, challenge
 
-
 def get2CaptchaChallengeAndValidateSeccode(challenge):
     captcha_url = f"https://2captcha.com/in.php?key={API_KEY}&method={method}&gt={gt}&challenge={challenge}&pageurl={pageurl}&api_server={api_server}&json=1"
     r = requests.get(captcha_url)
