@@ -20,7 +20,6 @@ def init():
     # 设置等待超时
     wait = WebDriverWait(browser, 20)
 
-
 # 登录
 def login():
     # 打开登录页面
