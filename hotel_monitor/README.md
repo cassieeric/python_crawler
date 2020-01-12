@@ -1,6 +1,9 @@
 # Introduction
 This folder is mainly used to store hotel_monitor script. With the Python script, you can get the monitor device Mac address information.
-And then, based on the Mac address information, you can refer to website https://mac.51240.com/, in order to get the devive
+
+And then, based on the Mac address information, you can refer to website https://mac.51240.com/, in order to get more information about the devive.
+
+Hoping the scrpits can help you detect monitor device when you hoteling.
 
 # Environment
 Ubuntu18.04 + Pyhton3.5 + Pycharm
