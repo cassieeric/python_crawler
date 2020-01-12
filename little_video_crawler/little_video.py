@@ -18,19 +18,19 @@ def get_href(url): # 提取每个视频所在网页的href,交给get_video_url�
         print(title,url,Guid)
         down_load_video(title, VideoHtmlUrl, Guid)
         
-def down_load_video(title,VideoHtmlUrl,Guid): #下载视频
+def down_load_video(title, VideoHtmlUrl, Guid): # 下载视频
     url='https://shankapi.ifeng.com/feedflow/getVideoAuthUrl/{0}/getVideoAuthPath_1'.format(Guid)
-    response=requests.get(url,headers=header)
-    results=json.loads(response.text.replace('getVideoAuthPath_1(','').replace(')',''))
+    response=requests.get(url, headers=header)
+    results=json.loads(response.text.replace('getVideoAuthPath_1(','').replace(')', ''))
     results=results['data']
-    vid = results['authUrl']   #得到除Vkey外的参数
+    vid = results['authUrl']   # 得到除Vkey外的参数
     video_url='https://60-28-123-129.ksyungslb.com/video19.ifeng.com/video09/2020/01/08/p26275262-102-9987636-172625/index.m3u8?reqtype=tsl&'+vid
-    response=requests.get(video_url,headers=header)
+    response=requests.get(video_url, headers=header)
     IndexTs=response.text.split('\n')[5:][::2]
     for i in IndexTs:
         TsUrl='https://60-28-123-129.ksyungslb.com/video19.ifeng.com/video09/2020/01/08/p26275262-102-9987636-172625/'+i
         res = requests.get(TsUrl, stream=True, headers=header)  # 根据视频原始地址获得视频数据流
-        with open('{0}.mp4'.format(title.replace('|','')), 'ab')as f:  # 保存数据流为MP4格式
+        with open('{0}.mp4'.format(title.replace('|', '')), 'ab')as f:  # 保存数据流为MP4格式
             f.write(res.content)
             f.flush()
 def main():
