@@ -8,15 +8,16 @@ header = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0'
     }
 
-def get_href(url): #提取每个视频所在网页的href,交给get_video_url（）函数
-    response = requests.get(url,headers=header)
+def get_href(url): # 提取每个视频所在网页的href,交给get_video_url（）函数
+    response = requests.get(url, headers=header)
     items=json.loads(response.text)
     for item in items['data']['data']:
         title=item['title']
         VideoHtmlUrl='http:'+item['url']
         Guid=item['guid']
         print(title,url,Guid)
-        down_load_video(title,VideoHtmlUrl,Guid)
+        down_load_video(title, VideoHtmlUrl, Guid)
+        
 def down_load_video(title,VideoHtmlUrl,Guid): #下载视频
     url='https://shankapi.ifeng.com/feedflow/getVideoAuthUrl/{0}/getVideoAuthPath_1'.format(Guid)
     response=requests.get(url,headers=header)
