@@ -7,6 +7,7 @@ import threading
 header = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0'
     }
+
 def get_href(url): #提取每个视频所在网页的href,交给get_video_url（）函数
     response = requests.get(url,headers=header)
     items=json.loads(response.text)
