@@ -33,11 +33,12 @@ def down_load_video(title, VideoHtmlUrl, Guid): # 下载视频
         with open('{0}.mp4'.format(title.replace('|', '')), 'ab')as f:  # 保存数据流为MP4格式
             f.write(res.content)
             f.flush()
+                
 def main():
     pagenum=3
-    for i in range(1,pagenum):
+    for i in range(1, pagenum):
         url='https://shankapi.ifeng.com/shanklist/getVideoStream/{0}/24/27-95288-/1'.format(i)
-        t=threading.Thread(target=get_href,args=(url,))
+        t=threading.Thread(target=get_href, args=(url,))
         t.start()
 if __name__=='__main__':
     main()
