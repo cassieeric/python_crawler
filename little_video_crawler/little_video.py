@@ -40,5 +40,6 @@ def main():
         url='https://shankapi.ifeng.com/shanklist/getVideoStream/{0}/24/27-95288-/1'.format(i)
         t=threading.Thread(target=get_href, args=(url,))
         t.start()
+        
 if __name__=='__main__':
     main()
