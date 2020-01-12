@@ -1,5 +1,5 @@
 # Introduction
-This folder is mainly used to store hotel_monitor script.
+This folder is mainly used to store hotel_monitor script. With the Python script, you can get the monitor device Mac address information.
 
 # Environment
 Ubuntu18.04 + Pyhton3.5 + Pycharm
