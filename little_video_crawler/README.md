@@ -1,5 +1,5 @@
 # Introduction
-This folder is mainly used to store little video web crawler. With the Python script, you can get the video on the website batchly.
+This folder is mainly used to store little video web crawler. With the Python script, you can get the video on the website batchly into the local disk. 
 
 # Environment
 Python3.5 + Pycharm
