@@ -24,7 +24,6 @@ header_dict = {
 r1 = requests.get(url=base_url, headers=header_dict)
 r1.encoding = r1.apparent_encoding
 
-
 html = etree.HTML(r1.content)
 
 # 文章id列表
