@@ -48,7 +48,6 @@ header_dict = {
     "X-Requested-With": "XMLHttpRequest"
 }
 
-
 # 点赞
 for data_id in data_id_list[:10]:
     print(data_id)
