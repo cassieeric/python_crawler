@@ -17,7 +17,6 @@ yzm_max = "1"
 yzm_type = "1318"
 tools_token = ""
 
-
 # 初始化
 def init():
     # 定义为全局变量，方便其他模块使用
