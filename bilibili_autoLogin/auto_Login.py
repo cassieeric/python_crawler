@@ -69,7 +69,6 @@ def downfile():
     with open('bg.png', 'wb') as f:  # 保存图片到本地
         f.write(im_bytes)
 
-
 # 获取 缺口图片位置坐标
 def get_geetest_postion():
     headers = {
