@@ -5,4 +5,4 @@ This folder is mainly used to store telephone wechat(client wechat) auto operati
 Pycharm + Python3
 
 # Reference document
-Please refer to this source link: http://mp.weixin.qq.com/s?__biz=MzU3MzQxMjE2NA==&mid=100002263&idx=1&sn=827bcbdf485954e5a3fb496c0e0e6cd2&chksm=7cc34ffc4bb4c6ea791ee0984781cfc803ec7930b2163c8b52b475a0bef07852d37bdcf4c4d8#rd
+Detail procedure please refer to this source link: http://mp.weixin.qq.com/s?__biz=MzU3MzQxMjE2NA==&mid=100002603&idx=1&sn=7a5cf96f06aea7df705bed6ddeba0a0d&chksm=7cc34d004bb4c41678cb69e0adaed4b81c46eb3a38dca453d5f448a58c1b5de2fe1c954d576b#rd
