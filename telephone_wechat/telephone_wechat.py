@@ -8,4 +8,3 @@ desired_caps = {
 }
 server = 'http://localhost:4723/wd/hub'
 driver = webdriver.Remote(server, desired_caps)
-
