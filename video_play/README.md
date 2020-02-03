@@ -1,5 +1,5 @@
 # Introduction
-This folder is mainly used to store VIP video crawler related files.
+This folder is mainly used to store VIP video crawler related files. With the code, you can crawl the VIP video and can see them on you computer.
 
 # Environment
 Pycharm + Python3
