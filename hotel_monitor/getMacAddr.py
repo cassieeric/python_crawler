@@ -1,7 +1,6 @@
 from scapy.all import *
 import requests
 import re
-import ARP
 
 wifi = ''  # 把网卡名字加上，网卡的名字在ubuntu命令行输入ifconfig可以找到
 def MacToProduct(MAC):
