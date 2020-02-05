@@ -1,6 +1,7 @@
 from scapy.all import *
 import requests
 import re
+import ARP
 
 wifi = ''  # 把网卡名字加上，网卡的名字在ubuntu命令行输入ifconfig可以找到
 def MacToProduct(MAC):
@@ -14,7 +15,7 @@ def MacToProduct(MAC):
     print(results)
     
 while True:
-    p = Ether(dst='ff:ff:ff:ff:ff:ff') / ARP(pdst='192.168.0.1/24')
+    p = Ether(dst='ff:ff:ff:ff:ff:ff') / ARP(pdst='192.168.0.1/24')  # 如果有代码红线，应该是scrapy包或者ARP这个包没安装或者没导入
     # ans表示收到的包的回复
     ans, unans = srp(p, iface=wifi, timeout=4)
     print("一共扫描到{0}台主机：" .format(len(ans)))
