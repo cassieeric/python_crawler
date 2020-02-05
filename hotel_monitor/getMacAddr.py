@@ -2,7 +2,7 @@ from scapy.all import *
 import requests
 import re
 
-wifi = ''  # 把网卡名字加上
+wifi = ''  # 把网卡名字加上，网卡的名字在ubuntu命令行输入ifconfig可以找到
 def MacToProduct(MAC):
     header={
         'User-Agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0'
