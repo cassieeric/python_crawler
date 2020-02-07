@@ -1,6 +1,5 @@
 from selenium import webdriver
 from tkinter import *
-
 from PIL import ImageTk, Image
 
 def OpenHtml(url):
