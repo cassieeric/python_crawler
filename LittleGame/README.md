@@ -1,2 +1,2 @@
 # Introduction
-This folder is 
+This folder is mainly used to store little game related files or scripts.
