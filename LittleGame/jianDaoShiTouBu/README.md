@@ -1,6 +1,6 @@
 # Introduction
 This folder is mainly about shitoujiandaobu litttle game. With the Python script, you can make a litte game by yourself.
-
+Related material is stored in the "素材图片" folder, you can download them if you would like to realize the game.
 
 # Environment
 Python3.6 + Pycharm2018
