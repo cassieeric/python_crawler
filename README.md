@@ -16,3 +16,9 @@
 公众号后台回复“书籍”有福利噢！
 
 文章链接：https://www.zhihu.com/people/peng-dong-cheng-38/activities
+
+# QQ交流群
+Python学习资料和工具都已上传到扣扣群：734615061，欢迎大家免费领取~~
+
+# 微信交流群
+需要Python学习资料请加小编微信：pycharm1314（备注：学习），并且拉你加入我们的Python学习微信交流群噢~~
