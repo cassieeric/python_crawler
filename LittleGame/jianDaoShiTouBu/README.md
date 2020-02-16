@@ -1,4 +1,6 @@
 # Introduction
+This folder is mainly about shitoujiandaobu litttle game. With the Python script, you can make a litte game by yourself.
+
 
 # Environment
 Python3.6 + Pycharm2018
