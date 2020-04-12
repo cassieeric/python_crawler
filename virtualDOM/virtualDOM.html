@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <p>韩梅梅的咖啡机</p>
+        <p>李雷的致富之路</p>
+    </div>
+    <script>
+        class VNode {
+            constructor( tag, data, value, type ) {
+                this.tag = tag && tag.toLowerCase();
+                this.data = data;
+                this.value = value;
+                this.type = type;
+                this.children = [];
+            }
+
+            appChildren( value ) {
+                this.children.push( value );
+            }
+        }
+
+        function getVNode( node ) {
+            let nodeType = node.nodeType;
+            let _vnode = null;
+
+            if ( nodeType === 1 ) {
+                let nodeName = node.nodeName;
+                let property = node.attributes;
+                let _propertyObj = {};
+                for ( let i = 0; i < property.length; i++ ) {
+                    _propertyObj[ property[i].nodeName ] = property[i].nodeValue;
+                }
+
+                _vnode = new VNode( nodeName, _propertyObj, undefined, nodeType );
+
+                let childNodes = node.childNodes;
+                for( let i = 0; i < childNodes.length; i++ ) {
+                    _vnode.appChildren( getVNode( childNodes[i] ) )
+                }
+
+            } else if ( nodeType === 3 ) {
+                _vnode = new VNode( undefined, undefined, node.nodeValue, nodeType )
+            }
+            return _vnode;
+        }
+
+        function Vue ( options ) {
+            this._template = document.querySelector( options.el );
+            
+            let AST = getVNode( this._template )
+
+            console.log( AST )
+        }
+
+        const app = new Vue({
+            el:'#root',
+            data:{
+                name:'吴亦凡',
+                age:22
+            }
+        })
+
+    </script>
+</body>
+</html>
