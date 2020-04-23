@@ -1,3 +1,4 @@
-# This folder is mainly about Baidutieba.
+# Introduction
+This folder is mainly about Baidutieba.
 
 # More Reference Document
