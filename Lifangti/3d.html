@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3d立方体</title>
+	<style type="text/css">
+	.box{
+		width: 200px;
+		height: 200px;
+	
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+         transition:all 2s;
+        transform-style:preserve-3d;
+        transform:rotateX(15deg) rotateY(-15deg);
+
+	}
+	.box:hover{
+		transform: rotateX(300deg) rotateZ(300deg) rotateY(-300deg) scale(0.5);
+		
+	}
+	
+	.box .box-1{
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		line-height: 200px;
+		font-size: 2em;
+		position: absolute;
+		top: 0;
+		left: 0;
+	
+	}
+	.box .box-1:nth-child(1){
+		/*第一*/
+		background: rgba(225,0,0,0.5);
+		transform:rotateX(90deg) translateZ(100px);
+
+	}.box .box-1:nth-child(2){
+
+		background: rgba(255,255,0,0.5);
+		transform:rotateX(-90deg) translateZ(100px);
+
+	}.box .box-1:nth-child(3){
+
+		background: rgba(225,0,255,0.5);
+		transform:rotateY(-90deg) translateZ(100px);
+	}.box .box-1:nth-child(4){
+
+		background: rgba(0,255,0,0.5);
+		transform:rotateY(90deg) translateZ(100px);
+
+	}.box .box-1:nth-child(5){
+		background: rgba(225,0,0,0.5);
+			transform:translateZ(100px);
+	}.box .box-1:nth-child(6){
+
+		background: rgba(0,0,255,0.5);
+
+		transform:rotateY(180deg) translateZ(100px);
+	}
+	/*0000000000000000000000000000000000*/
+	.box2{
+		width: 100px;
+		height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        transform-style:preserve-3d;
+        transform:rotateX(0deg) rotateY(0deg);
+
+	}
+	.box2:hover{
+		  
+
+	}
+	
+	.box .box-2{
+		width: 100px;
+		height: 100px;
+		text-align: center;
+		line-height: 100px;
+		font-size: 1.2em;
+		position: absolute;
+		top: 0;
+		left: 0;
+	
+	}
+	.box .box-2:nth-child(1){
+		/*第一*/
+		background: rgba(225,0,0,0.5);
+		transform:rotateX(90deg) translateZ(50px);
+
+	}.box .box-2:nth-child(2){
+
+		background: rgba(255,255,0,0.5);
+		transform:rotateX(-90deg) translateZ(50px);
+
+	}.box .box-2:nth-child(3){
+
+		background: rgba(225,0,255,0.5);
+		transform:rotateY(-90deg) translateZ(50px);
+	}.box .box-2:nth-child(4){
+
+		background: rgba(0,255,0,0.5);
+		transform:rotateY(90deg) translateZ(50px);
+
+	}.box .box-2:nth-child(5){
+		background: rgba(225,0,0,0.5);
+			transform:translateZ(50px);
+	}.box .box-2:nth-child(6){
+
+		background: rgba(0,0,255,0.5);
+
+		transform:rotateY(180deg) translateZ(50px);
+	}
+	
+	</style>
+</head>
+<body>
+<div class="box">
+<div class="box-1">top</div>
+<div class="box-1">btm</div>
+<div class="box-1">left</div>
+<div class="box-1">right</div>
+<div class="box-1">face</div>
+<div class="box-1">back</div>
+
+<div class="box2">
+<div class="box-2">top</div>
+<div class="box-2">btm</div>
+<div class="box-2">left</div>
+<div class="box-2">right</div>
+<div class="box-2">face</div>
+<div class="box-2">back</div>
+</div>
+</div>
+
+</body>
+</html>
