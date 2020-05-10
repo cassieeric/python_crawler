@@ -4,7 +4,7 @@ from fake_useragent import UserAgent
 
 
 # 网站  ： url
-class Boss(object):
+class Zhaopin(object):
     def __init__(self):
         self.url = "https://gz.58.com/job/pn2/?param7503=1&from=yjz2_zhaopin&PGTID=0d302408-0000-3efd-48f6-ff64d26b4b1c&ClickID={}"  # /zhuanchang/:搜索的名字的拼音缩写
         ua = UserAgent(verify_ssl=False)
@@ -49,6 +49,7 @@ class Boss(object):
             html = self.get_page(url)
             self.page_page(html)
             print("==================第%s页爬取成功！！！！=====================" % page)
+            
 if __name__ == '__main__':
-    Siper = Boss()
+    Siper = Zhaopin()
     Siper.main()
