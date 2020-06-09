@@ -1,5 +1,5 @@
 # Introduction
-This folder is mainly about FastApi cases.
+This folder is mainly about FastApi cases. Hoping help you know more knowledge about Fastapi.
 
 # More Reference Document
 （入门篇）：http://mp.weixin.qq.com/s?__biz=MzU3MzQxMjE2NA==&mid=100002987&idx=1&sn=9a6666cde0565d654e9e0649e0da0aaa&chksm=7cc34a804bb4c396f43cd91935a211c1b2c1e4a9d4dc698cc6dfe43c08abf6fe4f269244af33#rd
