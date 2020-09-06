@@ -11,7 +11,7 @@
 
 该公众号专注于分享Python网络爬虫、数据挖掘、数据分析、数据处理、数据可视化、大数据、人工智能、云计算、机器学习等工具资源、热点资讯、相关技术文章、学习视频和学习资料等，您的关注是我们的奋斗源动力。了解更多请前往：https://mp.weixin.qq.com/s/RyzchoDhoVleFxZ4ZKf20Q
 
-公众号近期原创文章：https://mp.weixin.qq.com/s/u8cpIR3PiNpT6RMoGLtgow
+公众号近期原创文章汇总：https://mp.weixin.qq.com/s/u8cpIR3PiNpT6RMoGLtgow
 
 该公众号将不定期分享各种技术干货、学习资料、面试题目、送书福利、企业公司内推信息等。关注我们，您收获的不只是知识，还有经验与人脉！
 
