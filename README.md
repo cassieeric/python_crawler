@@ -17,7 +17,7 @@
 
 号外！在公众号后台回复“书籍”有福利噢！
 
-文章链接：https://www.zhihu.com/people/peng-dong-cheng-38/activities
+相关文章链接：https://www.zhihu.com/people/peng-dong-cheng-38/activities
 
 # QQ交流群
 Python学习资料和工具都已上传到扣扣群：734615061，欢迎大家免费领取~~
