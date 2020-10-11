@@ -72,7 +72,7 @@ class TianTangWebsite(object):
                print("%s下载成功" % filename)
 
     def main(self):
-        for i in range(1,2):#页数随机客户随便 设置
+        for i in range(1,2):  #页数随机客户随便 设置
           url=self.url.format(i)
           #print(url)
           html=self.get_home(url)
