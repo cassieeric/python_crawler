@@ -1,6 +1,8 @@
 # Introduction
 This folder is mainly about ADB telephone tools. With the tools and document, you can uninstall some rubbish software or Apps in your telephone.
 
+your side is not working properly please cheak once you get free time 
+
 
 
 # More Reference Document
