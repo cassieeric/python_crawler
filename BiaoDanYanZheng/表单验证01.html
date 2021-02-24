@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body {
+				padding: 0;
+			    margin: 0;
+				background-color: #0086B3;
+			}
+			.box {
+				background-color: #fff;
+			    font-size: 13px;
+			    margin: 0 auto;
+			    width: 850px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				border: 1px solid #4393C9;
+				border-radius: 10px;
+				-webkit-animation: xing 3s Linear forwards;
+			}
+			@keyframes xing{
+					0% {
+					transform:translateY(-725px);
+					}
+					50% {
+					transform:translateY(50px);
+					}
+					100% {
+					opacity: 1;
+					transform:translateY(100px);
+					}
+			}
+			.box-head {
+				display: flex;
+				text-align: center;
+				flex-direction: column;
+				border-radius: 10px 10px 0px 0px;
+			    width: 100%;
+				height: 50px;
+				margin-bottom: 50px;
+			}
+			
+			.box-body {
+				display: flex;
+				justify-content: center;
+			    padding: 10px 20px;
+			}
+			
+			.box-body th {
+			    font-weight: normal;
+			    vertical-align: top;
+			    padding-top: 12px;
+			}
+			
+			.box-body tr:last-child {
+			    text-align: center;
+			}
+			
+			.box-body input, button {
+			    vertical-align: middle;
+			    font-family: Tahoma, simsun;
+			    font-size: 12px;
+			}
+			
+			.box-body input[type=radio] {
+			    height: 38px;
+			}
+			
+			.box-body input[type=text],
+			.box-body input[type=password] {
+			    border-color: #bbb;
+			    height: 38px;
+			    font-size: 14px;
+			    border-radius: 2px;
+			    outline: 0;
+			    border: #ccc 1px solid;
+			    padding: 0 10px;
+			    width: 350px;
+			    -webkit-transition: box-shadow .5s;
+			    margin-bottom: 15px;
+			}
+			
+			.box-body input[type=text]:hover,
+			.box-body input[type=text]:focus,
+			.box-body input[type=password]:hover,
+			.box-body input[type=password]:focus {
+			    border: 1px solid #56b4ef;
+			    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05), 0 0 8px rgba(82, 168, 236, .6);
+			    -webkit-transition: box-shadow .5s;
+			}
+			
+			.box-body input::-webkit-input-placeholder {
+			    color: #999;
+			    -webkit-transition: color .5s;
+			}
+			
+			.box-body input:focus::-webkit-input-placeholder,
+			input:hover::-webkit-input-placeholder {
+			    color: #c2c2c2;
+			    -webkit-transition: color .5s;
+			}
+			
+			.box-body button[type=submit] {
+			    padding: 4px 15px;
+			    cursor: pointer;
+			    width: 120px;
+			    height: 40px;
+			    background: #4393C9;
+			    border: 1px solid #fff;
+			    color: #fff;
+			    font: 16px bolder;
+			}
+			
+			.box-body button[type=reset] {
+			    margin-left: 30px;
+			    cursor: pointer;
+			    width: 120px;
+			    height: 40px;
+			    background: #4393C9;
+			    border: 1px solid #fff;
+			    color: #fff;
+			    font: 16px bolder;
+			}
+			
+			.box-body .error {
+			    border: 1px solid #FF3300;
+			    background: #FFF2E5;
+			    font-size: 10px;
+			    height: 30px;
+			    line-height: 30px;
+			    margin-bottom: 10px;
+			    padding: 0 10px;
+			}
+			
+			.box-body .success {
+			    border: 1px solid #01BE00;
+			    background: #E6FEE4;
+			    font-size: 10px;
+			    height: 30px;
+			    line-height: 30px;
+			    margin-bottom: 10px;
+			    padding: 0 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+		    <div class="box-head"><h1>欢迎注册</h1><p style="font-size: 15px;">已有账号？<a href="#" style="color: #3366D4;">登录</a></p></div>
+		    <div class="box-body">
+		        <form id="register" >
+		            <table>
+		                <tr>
+		                    <th>用户名称：</th>
+		                    <td>
+								<input type="text" id="user" name="user" placeholder="长度4-12位，英文大小写字母">
+							</td>
+							<td>
+		                        <div></div>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <th>密　　码：</th>
+		                    <td><input type="password" id="passWord" name="passWord" placeholder="长度6-20位，大小写字母、数字或下划线"></td>
+		                    <td>
+		                        <div></div>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <th>确认密码：</th>
+		                    <td><input type="password" id="repassWord" name="repassWord" placeholder="请再次输入密码进行确认"></td>
+		                    <td>
+		                        <div></div>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <th>性　　别：</th>
+		                    <td><input type="radio" id="Male" name="sex" value="1"/><label for="Male">男</label>  
+		                        <input type="radio" id="Female" name="sex" value="0"/><label for="Female">女</label></td>
+		                    <td>
+		                        <div></div>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <th>手机号码：</th>
+		                    <td><input type="text" id="telephone" name="telephone" placeholder="13、14、15、17、18开头的11位手机号"></td>
+		                    <td>
+		                        <div></div>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <th>电子邮箱：</th>
+		                    <td><input type="text" id="email" name="email" placeholder="用户名@域名（域名后缀至少2个字符）"></td>
+		                    <td>
+		                        <div></div>
+		                    </td>
+		                </tr>
+		            </table>
+		            <div style="display: flex;justify-content: center;">
+		                <button type="submit" id="btn_ok">注册</button>
+		            </div>
+		        </form>
+		    </div>
+		</div>
+	</body>
+	<script>
+		// 获取所有input框
+		var inputs = document.getElementsByTagName('input');
+		// 为每个input框添加失去焦点事件
+		for (var i = 0; i < inputs.length; i++) {
+		    inputs[i].onblur = inputBlur;
+		}
+		
+		function inputBlur() {
+					// 获取输入框的name值、value值、框中的提示信息
+				    var name = this.name;           
+				    var val = this.value; 
+				    var display = this.placeholder;   
+				    var display_obj = this.parentNode.parentNode.children[2].children[0];  //显示提示信息
+				    //去掉两端空格
+				    val = val.trim();
+				    //判断内容为空，显示提示信息
+				    if (!val) {
+				        error(display_obj, '输入框内容不能为空');
+				        return false;
+				    }
+				    //获取正则匹配规则和提示信息
+				    var reg_msg = getRegMsg(name, display);
+				    //检测是否正则匹配
+				    if (reg_msg['reg'].test(val)) {
+				        // 匹配成功
+				        success(display_obj, reg_msg['msg']['success']);
+				    } else {
+				        // 匹配失败
+				        error(display_obj, reg_msg['msg']['error']);
+				    }
+				}
+		
+		// 根据input的name值，设置正则规则和提示信息
+		function getRegMsg(name, display) {
+		    var reg = msg = '';
+		    switch (name) {
+		        case 'user':
+		            reg = /^[a-zA-Z]{4,12}$/;
+		            msg = {'success': '用户名输入正确', 'error': display};
+		            break;
+		        case 'passWord':
+		            reg = /^.{6,20}$/;
+		            msg = {'success': '密码输入正确', 'error': display};
+		            break;
+		        case 'repassWord':
+		            var con = document.getElementsByTagName('input')[1].value;
+		            reg = RegExp("^" + con + "$");
+		            msg = {'success': '两次密码输入正确', 'error': '两次输入的密码不一致'};
+		            break;
+		        case 'sex':
+		            reg = /^[0-1]*$/;
+		            msg = {'success': '性别已选择', 'error': '性别不能为空'};
+		            break;
+		        case 'telephone': 
+					reg=/^1[34578]\d{9}$/;
+		            msg = {'success': '手机号码输入正确', 'error': display};
+		            break;
+		        case 'email':
+		            reg = /^(\w+(\_|\-|\.)*)+@(\w+(\-)?)+(\.\w{2,})+$/;
+		            msg = {'success': '邮箱输入正确', 'error': display};
+		            break;
+		    }
+		    return {'reg': reg, 'msg': msg};
+		}
+		// 成功
+		function success(obj, msg) {
+		    obj.className = 'success';
+		    obj.innerHTML = msg;
+		}
+		
+		// 失败
+		function error(obj, msg) {
+		    obj.className = 'error';
+		    obj.innerHTML = msg + '，请重新输入';
+		}
+	</script>
+</html>
