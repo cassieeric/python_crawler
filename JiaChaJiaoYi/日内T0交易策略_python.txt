@@ -1,0 +1,156 @@
+# 可以自己import我们平台支持的第三方python模块，比如pandas、numpy等。
+
+# 在这个方法中编写任何的初始化逻辑。context对象将会在你的算法策略的任何方法之间做传递。
+def init(context):
+    # 在context中保存全局变量
+    #context.s1 = "000002.XSHE"
+    #context.s1 = "600036.XSHG"
+    context.s1 = "600048.XSHG"
+    context.curTradePrice = 0
+    context.nextSellPrice = 0
+    context.nextBuyPrice = 0
+    context.increasePer = 0.020
+    context.decreasePer = 0.020
+    context.firstBuy = False
+    context.firstSetPrice = False
+    context.initBuyPer = 0.7
+
+    context.lockStockPercent = 0.5
+    context.lockStockNumber = 0
+
+    #上一日收盘价格
+    context.lastDayClosePrice = 0
+    #上一次交易类型，0 买入  1 卖出
+    context.lastTradeType = 0
+
+    context.tradeNumber = 3000
+
+    context.sellTradeList = []
+    context.buyTradeList = []
+
+    # 实时打印日志
+    logger.info("RunInfo: {}".format(context.run_info))
+
+
+
+# before_trading此函数会在每天策略交易开始前被调用，当天只会被调用一次
+def before_trading(context):
+    context.firstSetPrice = False
+
+    pass
+
+def calc_today_trade_price(context, baseTradePrice):
+    context.nextSellPrice = round(baseTradePrice * (1 + context.increasePer),2)
+    context.nextBuyPrice =  round(baseTradePrice * (1 - context.decreasePer),2)
+    context.curTradePrice =  round(baseTradePrice,2)
+    logger.info("开盘计算出的卖出价格: {}".format(context.nextSellPrice))
+    logger.info("开盘计算出的买入价格: {}".format(context.nextBuyPrice))
+
+
+def calc_next_trade_price(context,baseTradePrice):
+
+    context.nextBuyPrice =  round(baseTradePrice * (1 - context.decreasePer),2)
+    context.nextSellPrice = round(baseTradePrice * (1 + context.increasePer),2)
+    
+    context.curTradePrice =  round(baseTradePrice,2)
+    logger.info("下次卖出价格: {}".format(context.nextSellPrice))
+    logger.info("下次买入价格: {}".format(context.nextBuyPrice))
+    logger.info("当前交易价格: {}".format(context.curTradePrice))
+
+
+
+# 你选择的证券的数据更新将会触发此段逻辑，例如日或分钟历史数据切片或者是实时数据切片更新
+def handle_bar(context, bar_dict):
+    # 开始编写你的主要的算法逻辑
+  
+    if not context.firstSetPrice:
+         context.lastDayClosePrice = bar_dict[context.s1].prev_close
+         calc_today_trade_price(context,context.lastDayClosePrice)
+         context.firstSetPrice = True
+
+    if not context.firstBuy:
+        openPrice = bar_dict[context.s1].open
+        # list = history_bars('000002.XSHE', 1, '1d', 'close')
+        # logger.info(list)
+        # context.curTradePrice = list[0]
+        context.curTradePrice = openPrice
+        #context.lastDayClosePrice = bar_dict[context.s1].prev_close
+
+        logger.info("当前基础价格: {}".format(context.curTradePrice))
+        logger.info("当前佣金费用: {}".format(context.run_info.commission_multiplier))
+
+        amount = int(context.run_info.stock_starting_cash * context.initBuyPer / context.curTradePrice / 100.0)  * 100
+        logger.info("建仓买入股数: {}".format(amount))
+        context.lockStockNumber = int(amount * context.lockStockPercent)
+        #context.tradeNumber = int(amount / context.tradeTotalNumber / 100.0)  * 100
+      
+        logger.info("每次交易买入卖出股数: {}".format(context.tradeNumber))
+
+        order_shares(context.s1, amount)
+        
+        #calc_next_trade_price(context,context.curTradePrice)
+        context.firstBuy = True
+
+    newPrice = bar_dict[context.s1].last
+    if newPrice >= context.nextSellPrice:
+        context.lastTradeType = 1
+        logger.info("执行高抛交易,对应价格:{}".format(newPrice))
+        amount = context.portfolio.positions[context.s1].quantity
+        #if amount - context.tradeNumber >= context.lockStockNumber:
+        if amount - context.tradeNumber >= 0:
+            logger.info("执行高抛交易,对应数量:{}".format(context.tradeNumber))
+            order_shares(context.s1, -context.tradeNumber)
+            plot("S", newPrice)
+        #elif amount >= 100:
+        #    logger.info("执行高抛交易,对应数量:{}".format(amount))
+        #    order_shares(context.s1, -amount)
+        #    plot("S", newPrice) 
+        else:
+            logger.info("股票数量不足，无法执行高抛交易,对应数量:{}".format(amount))
+            return    
+
+        
+        calc_next_trade_price(context,newPrice)
+
+
+        obj = {
+            "nextSellPrice":context.nextSellPrice,
+            "nextBuyPrice":context.nextBuyPrice,
+            "curTradePrice":context.curTradePrice
+        }
+        context.buyTradeList.append(obj)
+
+
+    if newPrice <= context.nextBuyPrice:
+        context.lastTradeType = 0
+        logger.info("执行低吸交易,对应价格:{}".format(newPrice))
+        amount = int(context.portfolio.cash / newPrice / 100.0)  * 100
+        if amount >= context.tradeNumber:
+            logger.info("执行低吸交易,对应数量:{}".format(context.tradeNumber))
+            order_shares(context.s1, context.tradeNumber)
+            plot("B", newPrice)
+        else:
+            logger.info("现金不足，无法执行低吸交易,对应数量:{}".format(amount))
+            return    
+
+        calc_next_trade_price(context,newPrice)
+       
+        obj = {
+            "nextSellPrice":context.nextSellPrice,
+            "nextBuyPrice":context.nextBuyPrice,
+            "curTradePrice":context.curTradePrice
+        }
+        context.sellTradeList.append(obj)    
+
+    
+    # bar_dict[order_book_id] 可以拿到某个证券的bar信息
+    # context.portfolio 可以拿到现在的投资组合信息
+
+    # 使用order_shares(id_or_ins, amount)方法进行落单
+
+    # TODO: 开始编写你的算法吧！
+   
+
+# after_trading函数会在每天交易结束后被调用，当天只会被调用一次
+def after_trading(context):
+    pass
