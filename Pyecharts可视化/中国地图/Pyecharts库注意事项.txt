@@ -1,0 +1,24 @@
+pyecharts 分为 v0.5 和 v1 两个大版本，v0.5 和 v1 间不兼容。
+参考链接：https://zhuanlan.zhihu.com/p/45202403
+
+pyecharts==0.5.10安装和地图包
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyecharts==0.5.10
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple echarts-countries-pypkg
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple echarts-china-provinces-pypkg
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple echarts-china-cities-pypkg
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple echarts-china-counties-pypkg
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple echarts-china-misc-pypkg
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple echarts-united-kingdom-pypkg
+pip install pyecharts_snapshot
+
+pyecharts v1.0安装，直接由v0.5进行升级即可：pip install -U pyecharts
+如果想切换为v0.5，就执行pyecharts==0.5.10的安装命令即可。
+
+v1以上的版本：https://github.com/pyecharts/pyecharts
+# 安装 v1 以上版本
+$ git clone https://github.com/pyecharts/pyecharts.git
+# 如果需要安装 0.5.11 版本，请使用 git clone https://github.com/pyecharts/pyecharts.git -b v05x
+$ cd pyecharts
+$ pip install -r requirements.txt
+$ python setup.py install
+
